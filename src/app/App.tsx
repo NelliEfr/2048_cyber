@@ -15,13 +15,43 @@ const useRng = () => useMemo<() => number>(() => () => Math.random(), []);
 const useKeyboard = (onDirection: (dir: Direction) => void) => {
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      const dirMap: Record<string, Direction> = {
+      const code = e.code;
+
+      // Layout-independent mapping (physical keys and arrows)
+      const codeMap: Record<string, Direction> = {
         ArrowUp: 'up',
         ArrowDown: 'down',
         ArrowLeft: 'left',
         ArrowRight: 'right',
+        KeyW: 'up',
+        KeyA: 'left',
+        KeyS: 'down',
+        KeyD: 'right',
       };
-      const dir = dirMap[e.key];
+
+      let dir: Direction | undefined = code ? codeMap[code] : undefined;
+
+      // Fallback by character (for older browsers / non-standard layouts)
+      if (!dir) {
+        const key = e.key;
+        const normalized = typeof key === 'string' ? key.toLowerCase() : '';
+        const keyMap: Record<string, Direction> = {
+          arrowup: 'up',
+          arrowdown: 'down',
+          arrowleft: 'left',
+          arrowright: 'right',
+          w: 'up',
+          ц: 'up',
+          a: 'left',
+          ф: 'left',
+          s: 'down',
+          ы: 'down',
+          d: 'right',
+          в: 'right',
+        };
+        dir = keyMap[normalized];
+      }
+
       if (dir) {
         e.preventDefault();
         onDirection(dir);

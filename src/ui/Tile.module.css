@@ -5,35 +5,42 @@
   justify-content: center;
   border-radius: 10px;
   font-weight: 800;
-  font-size: 22px;
+  font-size: 35px;
   color: #f8f8f8;
   box-shadow: 0 8px 14px rgba(0, 0, 0, 0.35);
   transition: transform 120ms ease, box-shadow 120ms ease;
   height: 100%;
 }
 
-.v2    { background: #1e293b; color: #e5e7eb; }
-.v4    { background: #273449; color: #e5e7eb; }
-.v8    { background: #2563eb; color: #ffffff; }
-.v16   { background: #3b82f6; color: #ffffff; }
-.v32   { background: #6366f1; color: #ffffff; }
-.v64   { background: #8b5cf6; color: #ffffff; }
-.v128  { background: #a855f7; color: #ffffff; }
-.v256  { background: #c084fc; color: #0b0e14; }
-.v512  { background: #e879f9; color: #0b0e14; }
-.v1024 { background: #f0abfc; color: #0b0e14; font-size: 20px; }
-.v2048 { background: #22d3ee; color: #042f2e; font-size: 20px; }
+
+.v2    { background: #1f2937; color: #e5e7eb; }   
+.v4    { background: #334155; color: #e5e7eb; }   
+
+.v8    { background: #1d4ed8; color: #ffffff; }   
+.v16   { background: #2563eb; color: #ffffff; }   
+
+.v32   { background: #4f46e5; color: #ffffff; }   
+.v64   { background: #7c3aed; color: #ffffff; }   
+
+.v128  { background: #c026d3; color: #ffffff; }   
+.v256  { background: #ec4899; color: #0b0e14; }   
+
+.v512  { background: #f97316; color: #1a1a1a; }   
+.v1024 { background: #facc15; color: #1a1a1a; font-size: 20px; } 
+
+.v2048 { background: #22c55e; color: #052e1c; font-size: 20px; } 
+
 
 /* endgame */
 .v4096 {
-  background: #06b6d4;
-  color: #042f2e;
+    background: #00e5ff; /* neon cyan */
+    color: #022c3a;
 }
-
+  
 .v8192 {
-  background: #22c55e;
-  color: #052e1c;
-}
+    background: #39ff14; /* neon green */
+    color: #052e1c;
+}  
 
 
 .new {
