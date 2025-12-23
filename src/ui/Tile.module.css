@@ -1,0 +1,47 @@
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 22px;
+  color: #f8f8f8;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  height: 100%;
+}
+
+.v2    { background: #1e293b; color: #e5e7eb; }
+.v4    { background: #273449; color: #e5e7eb; }
+.v8    { background: #2563eb; color: #ffffff; }
+.v16   { background: #3b82f6; color: #ffffff; }
+.v32   { background: #6366f1; color: #ffffff; }
+.v64   { background: #8b5cf6; color: #ffffff; }
+.v128  { background: #a855f7; color: #ffffff; }
+.v256  { background: #c084fc; color: #0b0e14; }
+.v512  { background: #e879f9; color: #0b0e14; }
+.v1024 { background: #f0abfc; color: #0b0e14; font-size: 20px; }
+.v2048 { background: #22d3ee; color: #042f2e; font-size: 20px; }
+
+/* endgame */
+.v4096 {
+  background: #06b6d4;
+  color: #042f2e;
+}
+
+.v8192 {
+  background: #22c55e;
+  color: #052e1c;
+}
+
+
+.new {
+  animation: pop 180ms ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.85); }
+  100% { transform: scale(1); }
+}
+
